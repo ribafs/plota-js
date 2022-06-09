@@ -2,7 +2,7 @@
 
 ## Gráficos de funções usando Javascript
 
-Usando as bibliotecas mathjs e plotly
+Usando as bibliotecas mathjs, plotly e jsxgraph
 
 ## Referências
 
