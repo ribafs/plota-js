@@ -28,19 +28,19 @@
   </style>
 </head>
 <body>
-<h1>Gráficos de funções com mathjs e plotly</h1>
-<h3>Digite uma equação abaixo ou clique num dos exemplos então clique em Draw</h3>
+<h1>Plotando gráficos de funções com mathjs e plotly</h1>
+<h3>Digite uma equação abaixo ou apenas selecione um exemplo então clique em Draw</h3>
 <form id="form">
   <label for="eq"></label>
   <input type="text" name="eq" id="eq" value="4 * sin(x) + 5 * cos(x/2)" />
-  <input type="submit" value="Draw" />
+  <input type="submit" value="Draw"/>
 </form>
 <strong>Exemplos</strong>:<br>
 <input type="button" value="2*x^2 + 3*x -3" onmouseover="eq.value=this.value"><br>
 <input type="button" value="-2*x^2 -8*x +15" onmouseover="eq.value=this.value"><br>
 <input type="button" value="20 * sin(x)" onmouseover="eq.value=this.value"><br>
 <input type="button" value="4 * sin(x) + 5 * cos(x/2)" onmouseover="eq.value=this.value"><br>
-<input type="button" value="tan(x) + 5 * cos(x/2)" onmouseover="eq.value=this.value"><br>  
+<input type="button" value="tan(x) + 5 * cos(x/2)" onmouseover="eq.value=this.value"><br>
 <input type="button" value="-2*x + 4" onmouseover="eq.value=this.value"><br>
 <input type="button" value="2*x + 4" onmouseover="eq.value=this.value"><br>
 
@@ -51,6 +51,11 @@
 </p>
 
 <script>
+  function enviar(){
+    document.getElementById('eq').value="2*x^2 + 3*x -3";
+    document.getElementById('form').submit();
+  }
+
   function draw() {
     try {
       // compile the expression once
